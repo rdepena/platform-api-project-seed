@@ -1,0 +1,20 @@
+{
+    "startup_app": {
+        "name": "OpenfinTraditionalApp",
+        "url": "https://cdn.openfin.co/embed-web/chart.html",
+        "uuid": "OpenfinTraditionalApp",
+        "applicationIcon": "https://openfin.github.io/golden-prototype/favicon.ico",
+        "autoShow": true,
+        "saveWindowState": true
+    },
+    "runtime": {
+        "arguments": "",
+        "version": "alpha"
+    },
+    "shortcut": {
+        "company": "OpenFin",
+        "description": "Openfin POC",
+        "icon": "https://openfin.github.io/golden-prototype/favicon.ico",
+        "name": "OpenfinTraditionalApp"
+    }
+}
