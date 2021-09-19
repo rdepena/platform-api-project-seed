@@ -44,7 +44,13 @@
             "experimental": {
                 "childWindows": true,
                 "analytics": true
-            }
+            },
+            "preloadScripts": [
+                {
+                    "url":"http://localhost:5555/js/sparkline-preload.js",
+                    "mandatory": true
+                }
+            ]
         },
         "commands": [
             {
