@@ -17,18 +17,28 @@ self.addEventListener('fetch', evt => {
 
 function precache() {
     return caches.open(CACHE).then(cache => {
-        return cache.addAll([
-            './index.html',
-            './view-container.html',
-            './view-form.html',
-            './favicon.ico',
-            'js/frame-api.js',
-            'js/index.js',
-            'js/view-container.js',
-            'js/view-form.js',
-            './node_modules/lit-html/lit-html.js'
-        ]);
+
+            return cache.addAll([
+                'platform-window.html',
+                'provider.html',
+                'favicon.ico',
+                'color-view.html',
+                'js/color-view.js',
+                'js/external-window-snapshot.js',
+                'js/layout-form.js',
+                'js/left-menu.js',
+                'js/platform-provider.js',
+                'js/platform-window.js',
+                'js/snapshot-form.js',
+                'js/template-store.js',
+                'js/title-bar.js',
+                'styles/frame-styles-template.css',
+                'styles/frame-styles.css',
+                'styles/light-theme.css'
+            ]);
+        //'node_modules/lit-html/lit-html.js'
     });
+
 }
 
 function fromNetwork(request, timeout) {
