@@ -7,6 +7,7 @@ class ColorPicker extends HTMLElement {
         this.render();
         fin.me.on('host-context-changed', this.onContextChanged);
 
+        this.applyColor("red");
         // Set initial color based on current context value
         fin.Platform.getCurrentSync().getWindowContext().then(initialContext => {
             if (initialContext && initialContext.color) {
@@ -36,7 +37,8 @@ class ColorPicker extends HTMLElement {
    setColor = async (event) => {
         event.preventDefault();
         const color = this.querySelector('input').value;
-        await fin.Platform.getCurrentSync().setWindowContext({ color });
+        this.applyColor(color);
+        //await fin.Platform.getCurrentSync().setWindowContext({ color });
     }
 
    applyColor = async (color) => {
