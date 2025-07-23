@@ -1,0 +1,36 @@
+{
+    "Workspace": {
+        "permissions": {
+            "System": {
+                "openUrlWithBrowser": {
+                    "enabled": true,
+                    "protocols": [
+                        "mailto"
+                    ]
+                }
+            }
+        },
+        "urls": [
+            "https://workspace.openfin.co/*.json*"
+        ]
+    },
+    "desktopSettings": {
+        "extensionServerURLs": [
+            "https://clients2.google.com/service/update2/crx"
+        ],
+        "systemApps": {
+            "notification-center": {
+                "assetsUrl": "https://workspace.openfin.co/release/",
+                "version": "2.3.2"
+            },
+            "workspace": {
+                "customConfig": {
+                    "hotkeys": {
+                        "toggleHomeVisibility": "Ctrl+Alt+Shift+F"
+                    }
+                },
+                "version": "17.0.14"
+            }
+        }
+    }
+}
