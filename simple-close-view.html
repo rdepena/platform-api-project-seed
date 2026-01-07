@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Snap</title>
+  <style>
+    .snap {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-family: sans-serif;
+    }
+
+    .close-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+      line-height: 1;
+    }
+
+    .close-btn:hover {
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+  <div class="snap">
+    <span>Hello world</span>
+    <button
+      class="close-btn"
+      title="close"
+      aria-label="close"
+      id="closeBtn"
+    >
+      ×
+    </button>
+  </div>
+
+  <script>
+    const closeBtn = document.getElementById('closeBtn');
+
+    closeBtn.addEventListener('click', () => {
+        fin.me.hide();
+      // you will write the code here
+    });
+  </script>
+</body>
+</html>

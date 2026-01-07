@@ -72,7 +72,7 @@
                                     "componentName": "view",
                                     "componentState": {
                                         "processAffinity": "ps_1",
-                                        "url": "https://cdn.openfin.co/health/deployment/index.html"
+                                        "url": "http://localhost:5555/color-view.html"
                                     }
                                 },
                                 {

@@ -1,4 +1,15 @@
-import { html, render } from 'https://unpkg.com/lit-html@1.0.0/lit-html.js';
+import { html, render } from 'https://unpkg.com/lit-html@1.0.0/lit-html.js';;
+
+async function createView() {
+    const me = await fin.me.getCurrentWindow();
+    window.view = await fin.View.create({
+        name: 'viewNameCreate',
+        target: me.identity,
+        bounds: {top: 10, left: 10, width: 200, height: 200},
+        url: 'http://localhost:5555/simple-close-view.html',
+    });
+    await window.view.navigate('http://localhost:5555/simple-close-view.html');
+}
 
 class ColorPicker extends HTMLElement {
     constructor() {
@@ -14,6 +25,9 @@ class ColorPicker extends HTMLElement {
             }
         });
 
+        createView();
+
+
     }
 
     render = () => {
@@ -28,6 +42,11 @@ class ColorPicker extends HTMLElement {
             </form>
             <button @click=${() => fin.me.showDeveloperTools()}>
                 Show dev tools
+            </button>
+            <button @click=${async () => {
+                window.view.show();
+            }}>
+                Create Simple close View
             </button>
         </fieldset>`;
         return render(content, this);
